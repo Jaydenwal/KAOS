@@ -1,0 +1,1901 @@
+一．单择题（每题2分，共40分）
+(C) 1、创建JSP应用程序时，配置文件web.xml应该在程序下的__目录中。
+    A) admin
+    B) servlet
+    C) WEB-INF
+D) WebRoot
+
+(B) 2、jsp最终被运行的是__文件。
+    A) java
+    B) class
+C) HTML
+D) JSP
+
+(B) 3、下面___不是JSP本身已加载的基本类。
+    A) java.lang.*
+    B) java.io.*
+    C) javax.servlet.*
+D) javax.servlet.jsp.*
+
+(C) 4、对于预定义<%!预定义%>的说法错误的是___。
+    A) 一次可声明多个变量和方法，只要以“;”结尾就行
+    B) 一个声明仅在一个页面中有效
+    C) 声明的变量将作为局部变量
+D) 在预定义中声明的变量将在JSP页面初始化时初始化
+
+(B) 5、include指令用于在JSP页面静态插入一个文件，插入文件可以是JSP页面、HTML网页、文本文件或一段Java代码，但必须保证插入后形成的文件是__。
+    A) 是一个完整的HTML文件
+    B) 是一个完整的JSP文件
+    C) 是一个完整的TXT文件
+D) 是一个完整的Java源文件
+
+(A) 6、在Jsp页面中，Java程序代码应插入在__标记之间。
+    A) <% 和 %>
+    B) <% 和 />
+    C) </ 和 %>
+D) <% 和 !>
+
+(B) 7、可以在以下__标记之间插入变量与方法声明。
+    A) <% 和 %>
+    B) <%! 和 %>
+    C) </ 和 %>
+D) <% 和  !>
+
+(A) 8、jsp中java表达式的语法格式为__。
+    A) <%=  %>
+    B) <%!  %>
+    C) <%@  %>
+D) <%   %>
+
+(C) 9、下列__注释为隐藏型注释。
+    A) <!-- 注释内容 [<%= 表达式 %>] -->
+    B) <!-- 注释内容  -->
+    C) <%-- 注释内容 --%>
+D) <!—[<%= 表达式 %>] -->
+
+(A) 10、在JSP中，<%="1+4"%>将输出__。
+    A) 1+4
+    B) 5
+    C) 14
+    D) 不会输出，因为表达式是错误的
+
+(C) 11、用户需要在数据库添加数据行，使用__方法向服务器发送请求。
+    A) get
+    B) post
+    C) method
+D) 以上都不对
+
+(C) 12、在JSP页面中通过<jsp:forward page=urlname/>将本页面请求转发至指定URL指定的文件，则在该URL组件(JSP页面)中，除了__范围，其余均可接收数据。
+    A) session
+    B) request
+    C) page
+D) application
+
+(A) 13、<jsp:param>动作元素经常与__元素一起使用。
+    A) <jsp:include>
+    B) <jsp:useBean>
+    C) <jsp:setProperty>
+D) <jsp:import>
+
+(C) 14、jsp指令不包括__指令。
+    A) page
+    B) taglib
+    C) import
+D) include
+
+(B) 15、下面__不属于jsp动作标记。
+    A) <jsp:attribute/>
+    B) <jsp:forwards/>
+    C) <jsp:include/>
+    D) <jsp:useBean/>
+
+(C) 16、Servlet中，HttpServletResponse的__方法用来把一个Http请求重定向到另外的URL。
+    A) sendURL()
+    B) redirectURL()
+    C) sendRedirect()
+D) redirectResponse()
+
+(D) 17、在Servlet中有一段代码如下 
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+     request.setAttribute("name", new Integer(100));
+     response.sendRedirect("show.jsp");
+    }
+    在show.jsp中
+    <%=request.getAttribute("name")%>
+    页面结果为__。
+    A) 100
+    B) java.lang.Integer
+    C) Integer
+D) null
+
+(A) 18、请求Servlet的时候，Servlet的对象由__。
+    A) 服务器负责实例化
+    B) 由开发人员在请求中实例化
+    C) Servlet会自动实例化
+D) Servlet只加载，无需实例化
+
+(C) 19、Servlet的运行过程是__。
+    A) 当请求Servlet时，服务器会即时加载Servlet类，然后对该类进行实例化，调用相应的方法处理请求
+    B) 首先对Servlet 进行配置，然后服务器在处理请求时，将配置过的Servlet类找到，然后实例化处理请求
+    C) 在服务器启动时,会加载Servlet，然后在处理请求的时候，实例化Servlet对象处理请求
+D) Servlet是一个具有接受请求和响应功能的类,在被请求时，Servlet早就被实例化好了，可以直接处理请求
+
+(A) 20、Servlet 接受请求时，会调用__。
+    A) service
+    B) doGet
+    C) doPost
+    D) init
+
+二．多选题（每题3分，共30分）
+(BD) 21、关于HttpSession的getAttibute()和setAttribute()方法，正确的说法是_____。（多选）
+    A) getAttributer()方法返回类型是String
+    B) getAttributer()方法返回类型是Object
+    C) setAttributer()方法保存数据时如果名字重复会抛出异常
+D) setAttributer()方法保存数据时如果名字重复会覆盖以前的数据
+
+(BCD) 22、下列关于JSP执行过程的说法正确的是____。（多选）
+    A) JSP在容器启动时会被翻译成Servlet，并编译为字节码文件。
+    B) JSP在第一次被请求时会被翻译成Servlet，并编译成字节码文件。
+    C) 在第二次请求时，将不再执行翻译步骤
+D) 如果JSP页面有错误将不再执行翻译步骤。
+ 
+(AB) 23、HttpServletRequest的____方法可以得到会话。（多选）
+    A) getSession()
+    B) getSession(Boolean)
+    C) getRequestSession();
+D) getHttpSession();
+
+(ABCD) 24、下列选项中可以关闭会话的是_____。(多选)
+    A) 调用HttpSession的close方法
+    B) 调用HttpSession的invalidate()方法
+    C) 等待HttpSession超时
+D) 调用HttpServletRequest的getSession(false)方法
+
+(ABD) 25、下列关于ServletContext的说法正确的是____。(多选)
+    A) 一个应用对应一个ServletContext
+    B) ServletContext的范围比Session的范围要大。
+    C) 第一个会话在ServletContext中保存了数据，第二个会话读取不到这些数据
+D) ServletContext使用setAttributer()和getAttribute()方法操作数据。
+
+(BD) 26、关于HttpSession的getAttibute()和setAttribute()方法，正确的说法是_____。（多选）
+    A) getAttributer()方法返回类型是String
+    B) getAttributer()方法返回类型是Object
+    C) setAttributer()方法保存数据时如果名字重复会抛出异常
+    D) setAttributer()方法保存数据时如果名字重复会覆盖以前的数据
+
+(ABC)27、JSP页面包括以下__元素。
+    A) JSP指令
+    B) JSP Action
+    C) JSP脚本
+D) JSP控件
+
+(ACD) 28、JSP生命周期可以分为以下__阶段。
+    A) 编译、装载
+    B) 创建、转换
+    C) 初始化、执行
+D) 清理、卸载
+
+(ABD) 29、以下JSP指令说明正确的是__。
+    A) JSP指令是JSP页面被编译成servlet时由JSP引擎处理的指令。
+    B) page指令通过导入类、定制Servlet的超类、设置内容类型等，可以控制Servlet的结构；
+    C) include指令可以在JSP文件转换成Servlet时，将Servlet类链接到外部文件；
+D) taglib指令用于定义定制的标记；
+
+(ABC) 30、使用JavaBean的好处有__。
+    A) JavaBean拥有标准化接口的优点，在开发期有可视化编程工具的支持，在运行期有JSP和J2EE连接器的支持。
+    B) JavaBean更明确的把WEB页面的设计和软件的设计区分开来。
+    C) JavaBean可以在多个应用程序中重用。
+    D) JavaBean可以实现安全性、事务行为、并发性和持久性。
+
+三．判断题（每题2.5分,共25分）
+(×)31、表单域可以单独使用，不一定非要放在<form>元素中。
+
+(×)32、在“<%!”和“%>”标记之间声明的Java的变量在整个页面内有效，不同的客户之间不可以共享。
+
+(√)33、用户在浏览器中输入http://127.0.0.1：8080/ch2/ch2_1.html即可访问本机上的该页面。
+
+(×)34、利用response对象的sendRedirect方法只能实现本网站内的页面跳转，但不能传递参数。
+
+(×)35、表单信息的验证只能放在服务器端执行。
+
+(×)36、网页中只要使用gb2312编码就不会出现中文乱码。
+
+(√)37、executeUpdate()是Statement接口的方法。
+
+(×)38、Tomcat服务器支持直接使用application对象。
+
+(√)39、Post属于表单的隐式提交信息方法。
+
+(×)40、在MVC模式的Web开发中，“视图”、“模型”和“控制器”分别对应着“JSP页面”、“JavaScript”和“Serlvet”，以Servlet为核心。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Java程序设计（1）
+Java程序设计 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:可以用关键字abstract 修饰的有(A )。( 2 分)
+A:类
+B:成员变量
+C:构造方法
+D:接口
+
+2:请问如下(B )方法可以将MenuBar加入Frame中。( 2 分)
+A:setMenu()
+B:setMenuBar()
+C:add()
+D:addMenuBar()
+
+3:使用SQL语句从数据库中更新记录，应使用( D)。( 2 分)
+A:SELECT
+B:INSERT
+C:DELETE
+D:UPDATE
+
+4:sleep(10000)表示调用此方法后可以使线程睡眠(C )秒。( 2 分)
+A:10000秒
+B:100秒
+C:10秒
+D:10000分钟
+
+5:下列( B)文件输入流用来对本地磁盘文件进行读取操作。( 2 分)
+A:FilterInputStream
+B:FileInputStream
+C:BufferInputStream
+D:StringInputStream
+
+6:给出下面代码段?
+　　1) public class Test {?
+　　2) int m, n;?
+　　3) public Test() {}?
+　　4) public Test(int a) { m=a; }?
+　　5) public static void main(String arg[]) {?
+　　6) Test t1,t2;?
+　　7) int j,k;?
+　　8) j=0; k=0;?
+　　9) t1=new Test();?
+　　10) t2=new Test(j,k);?
+　　11) }?
+　　12) }
+　( D)将引起一个编译时错误。( 2 分)
+A:line 3
+B:line 5
+C:line 6
+D:line 10
+
+7:下面(C )描述是正确的。( 2 分)
+A:Applet程序中不需要main()方法，也不能有
+B:Application程序中可以没有main()方法。
+C:Applet程序中可以不定义init( )方法
+D:Application程序中必须有run( )方法
+
+8:JAVA程序经常用到“递归”，“递归”的基本思想是( C)。( 2 分)
+A:让别人反复调用自己”
+B:.“自己反复调用别人”
+C:.“自己反复调用自己”
+D:以上说法都不对
+
+9:以下语句中有语法错误的是(C )。( 2 分)
+A:for（；；）；
+B:for（int I=0；I〈100；I++〉〔〕；
+C:if（a〈0〉a++；
+D:；；；
+
+10:下列说法正确的是(A )。( 2 分)
+A:编译后的Java源程序根据文件中定义的类和接口的个数产生相应个数的.class字节码文件。
+B:Java语言的源文件中不是任何地方都可以加注释的。
+C:一个文件中可以有多个访问权限为public的类。
+D:含有main()方法的类可以为public的类，也可以为其他类。
+
+11:主动产生一个异常而非动态抛出的是(A )。( 2 分)
+A:throw语句
+B:throws 语句
+C:try…catch 语句
+D:finally语句
+
+12:下面的程序段( C)有错误。1、class A{ 2、 private int x ; 3、 public void f(){ 4、 System.out.println(“Private Method f.”); 5、 } 6、 } 7、class B{ 8、 void g(){ 9、 A aa = new A(); 10、 aa.x=3; 11、 aa.f(); 12、 } 13、}( 2 分)
+A:8行
+B:9行
+C:10行
+D:11行
+
+13:下面说法错误的是( D)。( 2 分)
+A:不是方法中产生的所有异常错误都必须被捕获或声明。
+B:对于非运行时异常，则要求必须捕获或声明。
+C:子类方法抛出的异常只能是父类方法抛出异常的同类或子类
+D:以上都不对
+
+14:下列( C)语句是加载JDBC驱动程序的语句。( 2 分)
+A:Statement SQL语句变量=连接变量.createStatement( )
+B:Connection 连接变量=DriverManager.getConnection（数据库URL，用户帐号，用户密码）
+C:Class.forName（JDBC驱动程序名）
+D:连接变量.close()
+
+15:对成员的访问控制保护最强的是(C )。( 3 分)
+A:public
+B:缺省
+C:private
+D:protected
+
+16:Java使用(A )类来管理线程池中的多个进程。( 3 分)
+A:ThreadGroup
+B:Thread
+C:ProcessGroup
+D:Process
+
+17:下面(C )输出类具备数据类型或格式转换的功能，即向流中写入数据时，可以实现对二进制字节数据的编码功能。( 3 分)
+A:FileOutputStream
+B:FilterOutputStream
+C:DataOutputStream
+D:BufferedOutputStream
+
+18:Java Application源程序的主类是指包含有( A)方法的类。( 3 分)
+A:main方法
+B:toString方法
+C:init方法
+D:actionPerfromed方法
+
+19:给出一段程序，试判断(D )是正确的结果。 public class myprogram{ public static void main (String args[]){ try{ System.out.print(“Hello world ”); } finally{ System.out.println(“Finally executing”); } } }( 3 分)
+A:无法编译，因为没有指定异常
+B:无法编译，因为没有catch子句
+C:Hello world
+D:Hello world Finally executing
+
+20:关于接口(B )正确。( 3 分)
+A:实现一个接口必须实现接口的所有方法
+B:一个类可以实现多个接口
+C:接口间不能有继承关系
+D:接口和抽象类是同一回事
+
+多选题
+
+21:属于面向对象的语言有( CD)。( 2 分)
+A:C
+B:Pascal
+C:Java
+D:C++
+
+22:关于Applet，下列说法正确的是( BD)。( 2 分)
+A:Applet可以直接用java解释器执行
+B:Applet可以在浏览器中执行
+C:Applet就是一个Application，Application包含Applet
+D:Applet也可以是一个Application
+
+23:以下(ACD )方法是Applet采用AWT绘图时所采用的方法。( 2 分)
+A:paint()
+B:draw()
+C:update()
+D:repaint()
+
+24:如果下列的方法能够正常运行，在控制台上将显示( ACD)。public void example(){　　　try{　　　　　 unsafe(); 　　　　　 System.out.println("Test1");　　　　　}　　　catch(SafeException e)　　　　　{System.out.println("Test 2");}　　　finally{System.out.println("Test 3");}　　　System.out.println("Test 4");　　}( 2 分)
+A:Test 1
+B:Test 2
+C:Test 3
+D:Test 4
+
+25:定义一个方法时可加上的修饰词有(ABC )。( 2 分)
+A:public
+B:static
+C:final
+D:default
+
+26:对数据库的操作主要有( ABCD)。( 2 分)
+A:查询
+B:创建
+C:修改
+D:删除
+
+27:关于awt和swing说法正确的是(ABD )。( 2 分)
+A:awt在不同操作系统中显示相同的风格。
+B:swing在不同的操作系统中显示相同的风格
+C:swing是java.awt的子类
+D:awt和swing都支持事件模型
+
+28:多线程可以带来(ABC )问题。( 2 分)
+A:赛跑状态
+B:线程饥饿
+C:死锁
+D:无限循环
+
+29:下面关于Applet小程序的说法正确的是(ACD )。( 3 分)
+A:必须用import 语句把含有Applet类或JApplet类的包包含进来
+B:必须有main()方法，因为它是程序的入口
+C:Java Applet必须由浏览器来运行
+D:必须编写一个超文本文件（含有applet标记的Web页）
+
+30:Applet与Application的区别有(ABC )。( 3 分)
+A:Application 是从其中的main() 方法开始运行的。
+B:运行Applet必须创建一个浏览器文件，如HTML。
+C:Applet载入浏览器后必须指定何时运行。
+D:浏览器通过main()方法指定Applet何时执行。
+
+31:下列(BCD )方法是Connection对象所具有的方法。( 3 分)
+A:executeUpdate（）
+B:createStatement（）
+C:preparedStatement（）
+D:PrepareCall（）
+
+32:InputStream子类对象继承了InputStream类的方法read()，read()方法的定义有(AB )。( 3 分)
+A:public int read()
+B:public int read(byte b[ ])
+C:public char read()
+D:public char read(byte b[])
+
+判断题
+
+33:接口是由常量和抽象方法组成的特殊类。A( 2 分)
+A:正确
+B:错误
+
+34:最终类不能派生子类，最终方法不能被覆盖。A( 2 分)
+A:正确
+B:错误
+
+35:菜单的快捷方式是计算机自动分配的。B( 2 分)
+A:正确
+B:错误
+
+36:接口名可以作为方法返回值的类型。B( 2 分)
+A:正确
+B:错误
+
+37:数组允许存放不同类型的定长元素。B( 2 分)
+A:正确
+B:错误
+
+38:抽象类不能实例化。A( 2 分)
+A:正确
+B:错误
+
+39:当一个方法在运行过程中产生一个异常，则这个方法会终止，但是整个程序不一定终止运行。A( 2 分)
+A:正确
+B:错误
+
+40:在调用线程的start方法之后，线程转入可运行状态，直至线程执行完毕进入死亡状态。B( 2 分)
+A:正确
+B:错误
+
+41:一个非抽象类如果实现了某个接口，那么它必须覆盖该接口中的所有方法。A( 2 分)
+A:正确
+B:错误
+
+42:如果p是父类Parent的对象，而c是子类Child的对象，则语句p=c是正确的。A( 2 分)
+A:正确
+B:错误
+
+43:子类可以抛出比父类更多的异常。B( 3 分)
+A:正确
+B:错误
+
+44:在Java程序中，通过类的定义只能实现单重继承。A( 3 分)
+A:正确
+B:错误
+
+45:public long skip(long n)方法将指针从当前位置向后跳动n个字节。A( 3 分)
+A:正确
+B:错误
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Java程序开发（2）
+Java程序设计 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:下列(D )语句是关闭数据连接时使用的语句。( 2 分)
+A:Statement SQL语句变量=连接变量.createStatement( )
+B:Connection 连接变量=DriverManager.getConnection（数据库URL，用户帐号，用户密码）
+C:Class.forName（JDBC驱动程序名）
+D:连接变量.close()
+
+2:所有的例外类皆继承( B)类。( 2 分)
+A:java.io.Exception
+B:java.lang.Throwable
+C:java.lang.Exception
+D:java.lang.Error
+
+3:下列B )语句是连接数据库时使用的语句。( 2 分)
+A:Statement SQL语句变量=连接变量.createStatement( )
+B:Connection 连接变量=DriverManager.getConnection（数据库URL，用户帐号，用户密码）
+C:Class.forName（JDBC驱动程序名）
+D:连接变量.close()
+
+4:以下代码段执行后的输出结果为(B )。 int x=3； int y=10； System.out.println(y%x);( 2 分)
+A:0
+B:1
+C:2
+D:3
+
+5:用public int read()定义read()方法时，如果输入流的当前位置没有数据，则返回( B)。( 2 分)
+A:0
+B:-1
+C:NULL
+D:ERROR
+
+6:创建字符串s：String s=new String（“hello”）；下面(D )语句将改变s。( 2 分)
+A:s.append(“aaa”);
+B:s.concat(s);
+C:s.substring(3)
+D:以上语句都不会
+
+7:如果目前图形界面中的布局是BorderLayout,需要使新加入的组件位于图形界面的下部，应该调整(C )属性的值 。( 2 分)
+A:alignmentx
+B:alignmenty
+C:constraints
+D:以上都不是
+
+8:有继承关系时用到的关键字是(B )。( 2 分)
+A:extend
+B:extends
+C:implements
+D:implement
+
+9:接口中定义的成员变量是(A )。( 2 分)
+A:由于是常量，定义的同时赋值。
+B:可先定义，后赋值。
+C:可通过方法对其进行赋值。
+D:以上都对
+
+10:可以通过在线程组上调用(C)方法将所有线程入进一个数组。( 2 分)
+A:group
+B:collect
+C:enumerate
+D:enter
+
+11:Applet执行(D )方法后，进入消亡态。( 2 分)
+A:start()
+B:init()
+C:stop()
+D:destroy()
+
+12:语句drawRect(40,50,160,150)执行的结果是(B )。( 2 分)
+A:画一个左上角顶点是（40，50）、右下角顶点是（160，150）的矩形
+B:画一个左上角顶点是（40，50）、宽160，长150的矩形
+C:画一个右上角顶点是（40，50）、左下角顶点是（160,150）的矩形
+D:画一个右上角顶点是（40，50）、宽160，长150的矩形
+
+13:while循环和do…while循环的区别是(D )。( 2 分)
+A:没有区别，这两个结构任何情况下效果都一样
+B:while比do…while循环执行效力高
+C:while循环是先循环后判断，所以循环至少被执行一次
+D:do…while循环是先循环后判断，所以循环至少被执行一次
+
+14:关于对象成员占用内存的说法(B )是正确的。( 2 分)
+A:同一个类的对象共同用一段内存
+B:同一个类的对象使用不同一段内存,但静态成员共享相同的内存空间
+C:对象的方法不占用内存
+D:以上都不对
+
+15:一个进程内的基本调度单位称为(D )。( 3 分)
+A:作业
+B:信元
+C:进程上下文
+D:线程
+
+16:下列关于声明，表达式和脚本的描述中正确的是(B )。( 3 分)
+A:声明和表达式结束要求分号，而脚本不用
+B:声明在初始化执行，而表达式和脚本是要到响应时才执行
+C:声明、表达式的作用范围是整个Jsp界面，而小脚本作用范围只是所在的语句
+D:以上都对
+
+17:给出下面一段程序，选择运行结果：
+public class X{
+public static void main(String [] args){
+String names[]=new String[5];
+for(int x=0;x〈args.length;x++) names[x]=args[x];
+System.out.println(names[2]);
+}}
+命令行执行： java X a b 结果是(C )。( 3 分)
+A:names
+B:b
+C:null
+D:运行出现异常
+
+18:以下程序段(B )有错误。
+1、import java.applet.*; 2、import java.awt.*; 3、 class Chengji{ 4、 protected float f(float x, float y){ 5、 return x*y; 6、 } 7、 } 8、 class Xiangjia extends Chengji{ 9、 float f(float x, float y){ 10、 return x+y; 11、 } 12、}( 3 分)
+A:8行
+B:9行
+C:4行
+D:10行
+
+19:JDBC提供的接口java.sql.DriverManager的功能是( A)。( 3 分)
+A:用于处理驱动程序的调入
+B:与特定数据库建立连接
+C:用于SQL语句的执行
+D:用于保存查询所得的结果
+
+20:如果一个类必须继承另一个非Thread类，此时要实现多线程只能(C )方式。( 3 分)
+A:通过创建Process类的子类来实现
+B:通过创建Thread类的子类来实现
+C:通过实现Runnable接口的类来实现
+D:通过实现RunTime接口的类来实现
+
+多选题
+
+21:下面(ACD )设备属于输入设备。( 2 分)
+A:描扫仪
+B:音箱
+C:键盘
+D:话筒
+
+22:Java语言的特点是( ABCD)。( 2 分)
+A:简单性
+B:面向对象
+C:平台独立性
+D:多线程
+
+23:以下( ACD)方法是Applet采用AWT绘图时所采用的方法。( 2 分)
+A:paint()
+B:draw()
+C:update()
+D:repaint()
+
+24:下面对main()方法说法正确的是( ABCD)。( 2 分)
+A:main()方法是类方法。
+B:它不能直接访问实例方法和实例变量，必须通过对象访问它们。
+C:main()方法可以直接访问类方法和类变量。
+D:以上都对。
+
+25:下列程序的错误有( BC) 。
+　　final class First {
+　　　private int a = 1;
+　　　int b = 2;
+　　}?
+　　class Second extends First {
+　　　public void method() {
+　　　　System.out.println(a + b);
+　　　}
+　　}( 2 分)
+A:println()参数应为字符串，因此此处不能调用该方法
+B:因为变量a 是private ,所以在其他类中不能访问a
+C:Second 不能继承First。
+D:关键字final不能修饰类
+
+26:下列程序存在的错误有（ BC）。
+final class First {
+　　　private int a = 1;
+　　　int b = 2;
+　　}?
+class Second extends First {
+　　　public void method() {
+　　　　System.out.println(a + b);
+　　　}
+　　}( 2 分)
+A:println()参数应为字符串，因此此处不能调用该方法。
+B:因为变量a 是private ,所以在其他类中不能到访问a。
+C:Second 不能继承First。
+D:关键字final不能修饰类。
+
+27:定义一个类名为"MyClass.java"的类，并且该类可被一个工程中的所有类访问，那么该类的正确声明应为(CD )。( 2 分)
+A:private class MyClass extends Object
+B:class MyClass extends Object
+C:public class MyClass
+D:public class MyClass extends Object
+
+28:下列( CD)方法可以使线程停止。( 2 分)
+A:close()
+B:interrupt()
+C:stop()
+D:suspend
+
+29:如下(CD )方法可以从WindowEvent获取事件源。( 3 分)
+A:getFrame()
+B:getID()
+C:getSource()
+D:getWindow()
+
+30:下面(ABD )过程是数据库编程必须的过程。( 3 分)
+A:加载驱动程序
+B:连接数据库
+C:添加数据记录
+D:关闭连接
+
+31:Applet与Application的区别有(ABC )。( 3 分)
+A:Application 是从其中的main() 方法开始运行的。
+B:运行Applet必须创建一个浏览器文件，如HTML。
+C:Applet载入浏览器后必须指定何时运行。
+D:浏览器通过main()方法指定Applet何时执行。
+
+32:下列(ACD )属于输出流。( 3 分)
+A:从程序流向打印机的数据流
+B:从键盘流向程序的数据流
+C:从程序流向显示器的数据流
+D:从程序流向磁盘文件的数据流
+
+判断题
+
+33:使用Access创建数据库时，数据库名只能用英文命名。B( 2 分)
+A:正确
+B:错误
+
+34:PHP和JSP一样是服务器端的脚本语言A。( 2 分)
+A:正确
+B:错误
+
+35:数组允许存放不同类型的定长元素。B( 2 分)
+A:正确
+B:错误
+
+36:一个非抽象类如果实现了某个接口，那么它必须覆盖该接口中的所有方法。A( 2 分)
+A:正确
+B:错误
+
+37:菜单的快捷方式是计算机自动分配的。B( 2 分)
+A:正确
+B:错误
+
+38:Java程序文件的名称可以任意命名。B( 2 分)
+A:正确
+B:错误
+
+39:子类要调用父类的方法，必须使用super关键字。B( 2 分)
+A:正确
+B:错误
+
+40:stop在Applet退出时被调用，只调用一次。B( 2 分)
+A:正确
+B:错误
+
+41:Applet要通过浏览器执行，所以Applet小程序的后缀名是.html。B( 2 分)
+A:正确
+B:错误
+
+42:break语句可直接跳出外层循环。B( 2 分)
+A:正确
+B:错误
+
+43:方法的重载和覆盖是一码事。B( 3 分)
+A:正确
+B:错误
+
+44:Applet运行于服务器端。B( 3 分)
+A:正确
+B:错误
+
+45:JavaBean API中设计安全的地方有5点。B( 3 分)
+A:正确
+B:错误
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Java（3）
+Java程序设计 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:以下说法正确的是(A )。( 2 分)
+A:package语句作为Java源文件的第一条语句。
+B:import语句作为Java源文件的第一条语句。
+C:package语句作为Java源文件的类中的一条语句。
+D:import语句作为Java源文件的类中的一条语句
+
+2:在使用interface声明一个接口时，只可以使用(A)修饰符修饰该接口。( 2 分)
+A:public
+B:protected
+C:private protected
+D:private
+
+3:下面(D )注释方法能够支持javadoc命令。( 2 分)
+A:/**...**/
+B:/*...*/
+C://
+D:/**...*/
+
+4:Applet程序必须在(D )环境中运行。( 2 分)
+A:JVM
+B:服务器
+C:WINDOWS
+D:浏览器
+
+5:下面(C )描述是正确的。( 2 分)
+A:Applet程序中不需要main()方法，也不能有
+B:Application程序中可以没有main()方法。
+C:Applet程序中可以不定义init( )方法
+D:Application程序中必须有run( )方法
+
+6:在(A )情况下，线程由可阻塞状态进入可运行状态。( 2 分)
+A:线程获得CPU的使用权
+B:线程调用了sleep()方法
+C:线程调用了interrupt()方法
+D:线程执行结束
+
+7:下面语句哪个是正确的(B )。( 2 分)
+A:char='zdc';
+B:long l=oxfff;
+C:float f=0.65;
+D:double=0.7E-2;
+
+8:编译运行以下程序后，关于输出结果的说明正确的是 (C )。
+public class C{ public static void main(String args[ ]){ int x=0; System.out.println(“value is “+ ((x〉0) ?1.0 :0)); } }( 2 分)
+A:输出结果为：value is 1.0
+B:输出结果为：value is 0
+C:输出结果为：value is 0.0
+D:编译错误
+
+9:JAVA程序经常用到“递归”，“递归”的基本思想是( C)。( 2 分)
+A:让别人反复调用自己”
+B:.“自己反复调用别人”
+C:.“自己反复调用自己”
+D:以上说法都不对
+
+10:下列关于Javabean的说法错误的是( C)。( 2 分)
+A:Javabean必须是一个公共类（public）
+B:Javabean必须有一个公共类（public）的无参数的构造方法
+C:Javabean中的属性必须是公共的（public）
+D:Javabean通常要作为某些事件的事件源或监听器
+
+11:当Frame改变大小时，放在其中的按钮大小不变，则使用如下( C)layout。( 2 分)
+A:GridLayout
+B:CardLayout
+C:East and West of BorderLayout
+D:FlowLayout
+
+12:Java变量中，以下不属于复合类型的数据类型是( B)。( 2 分)
+A:类
+B:字符型
+C:数组型
+D:接口
+
+13:以下(A )语句是将Applet嵌入到HTML文档中。( 2 分)
+A:〈APPLET CODE=”applet程序名.class”〉
+B:〈APPLET=”applet程序名.class”〉
+C:〈APPLET CODE=”applet程序名.java”〉
+D:〈APPLET=”applet程序名.java”〉
+
+14:下面(D )不是JavaBean的特征。( 2 分)
+A:内省
+B:定制
+C:持续
+D:远程调用
+
+15:Java application中的主类需包含main方法，main方法的返回类型是( D)。( 3 分)
+A:int
+B:float
+C:double
+D:void
+
+16:JavaBean 的属性可以通过调用适当的bean方法进行(B )。( 3 分)
+A:读
+B:读写
+C:执行
+D:清空
+
+17:this和super( A)。( 3 分)
+A:都可以用在main()方法中
+B:都是指一个内存地址
+C:不能用在main()方法中
+D:意义相同
+
+18:给出下面一段程序，选择运行结果：
+public class X{
+public static void main(String [] args){
+String names[]=new String[5];
+for(int x=0;x〈args.length;x++) names[x]=args[x];
+System.out.println(names[2]);
+}}
+命令行执行： java X a b 结果是(C )。( 3 分)
+A:names
+B:b
+C:null
+D:运行出现异常
+
+19:类Teacher和Student是类Person的子类； 　　　Person p; 　　　Teacher t; 　　　Student s; 　　　//p, t and s are all non-null. 　　　if(t instanceof Person) { s = (Student)t; } 　　最后一句语句的结果是( C)。( 3 分)
+A:将构造一个Student对象；
+B:表达式是合法的；
+C:表达式是错误的；
+D:编译时正确，但运行时错误。
+
+20:设有下面两个类的定义： class Person { class Student extends Person { long id; // 身份证号 int score; // 入学总分 String name; // 姓名 int getScore(){ return score; } } } 则类Person和类Student的关系是(B )。( 3 分)
+A:包含关系
+B:继承关系
+C:关联关系
+D:上述类定义有语法错误
+
+多选题
+
+21:下列合理的标识符 为( AC)。( 2 分)
+A:_sys1_lll
+B:2mail
+C:$change
+D:class
+
+22:指出正确的表达式是( AB)。( 2 分)
+A:double a=1.0;
+B:Double a=new Double(1.0);
+C:byte a = 340;
+D:Byte a = 120;
+
+23:下面( ABCD)状态包含于线程的生命周期中。( 2 分)
+A:新建
+B:可运行
+C:阻塞
+D:死亡
+
+24:下述(ACD )说法是正确的。( 2 分)
+A:实例变量是类的成员变量
+B:实例变量是用static关键字声明的
+C:方法变量在方法执行时创建
+D:方法变量在使用之前必须初始化
+
+25:类与对象的关系是(ABC )。( 2 分)
+A:类是对象集合的再抽象。
+B:类（Class）是具有相同属性和行为的一组对象的集合。
+C:一个对象称作类的一个实例。
+D:类与对象是父与子的关系。
+
+26:以下(ACD )方法是Applet采用AWT绘图时所采用的方法。( 2 分)
+A:paint()
+B:draw()
+C:update()
+D:repaint()
+
+27:下面说法正确的是(ABC )。( 2 分)
+A:不是方法中产生的所有异常错误都必须被捕获或声明。
+B:对于非运行时异常，则要求必须捕获或声明。
+C:子类方法抛出的异常只能是父类方法抛出异常的同类或子类
+D:以上都不对
+
+28:关于JavaBean的事件的叙述，下面( AC)说法是正确的。( 2 分)
+A:JavaBeans通过传递事件在Bean之间通信
+B:事件源不需要启动者就可以工作
+C:JavaBean的事件模型和AWT的事件模型类似
+D:JavaBean没有事件模型
+
+29:关于Float，下列说法正确的是( ABD)。( 3 分)
+A:Float是一个类
+B:Float在java.lang包中
+C:Float a=1.0是正确的赋值方法
+D:Float a= new Float(1.0)是正确的赋值方法
+
+30:给出下面代码段：
+　　1) switch(m)
+　　2) { case 0: System.out.println("case 0");
+　　3) case 1: System.out.println("case 1"); break;
+　　4) case 2:
+　　5) default: System.out.println("default");
+　　6) }
+下列m的( CD)值将引起"default"的输出。( 3 分)
+A:0
+B:1
+C:2
+D:3
+
+31:以下说法正确的是(BCD )。( 3 分)
+A:对象的声明并不为对象分配内存空间，而只是分配一个引用；
+B:对象的实例化完成了对象的空间分配，这是由new操作完成的。
+C:运算符new为对象分配内存空间，它调用对象的构造方法，返回引用。
+D:一个类的不同对象分别占据不同的内存空间。
+
+32:下列(CD )常量可以做为线程的优先级。( 3 分)
+A:MAX
+B:MIN
+C:MAX_PRIORITY
+D:MIN_PRIORITY
+
+判断题
+
+33:HttpServlet类中定义了Servlet对象必须实现的init(),Service(),destroy()等方法。B( 2 分)
+A:正确
+B:错误
+
+34:接口是由常量和抽象方法组成的特殊类。A( 2 分)
+A:正确
+B:错误
+
+35:Java程序是由若干个类组成。A( 2 分)
+A:正确
+B:错误
+
+36:一个异常处理中 finally语句块只能有一个或者可以没有A。( 2 分)
+A:正确
+B:错误
+
+37:Java的字符类型采用的是Unicode编码，但所占字节由具体软硬件环境决定。B( 2 分)
+A:正确
+B:错误
+
+38:如果希望程序能够处理所有的异常，包括未知的异常，可以在所有的catch块后面加一个catch(Exception e)A。( 2 分)
+A:正确
+B:错误
+
+39:通过设置线程优先级可以使某些线程获得更多的CPU处理时间。A( 2 分)
+A:正确
+B:错误
+
+40:接口和抽象类是一回事。B( 2 分)
+A:正确
+B:错误
+
+41:类Class1中的属性被private修饰符修饰为私有变量，所以方法不能访问它。B( 2 分)
+A:正确
+B:错误
+
+42:继承性和多态性的结合，可以生成一系列虽类似但独一无二的对象。A( 2 分)
+A:正确
+B:错误
+
+43:在Java中对象可以赋值，只要使用赋值号（等号）即可，相当于生成了一个各属性与赋值对象相同的新对象。B( 3 分)
+A:正确
+B:错误
+
+44:有的类定义时可以不定义构造函数，所以构造函数不是必需的。B( 3 分)
+A:正确
+B:错误
+
+45:JavaBean API中设计安全的地方有5点。B( 3 分)
+A:正确
+B:错误
+
+
+
+
+
+
+SQL server 数据库开发（1）
+SQL Server 数据库开发 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:数据库系统中，什么体现数据之间的联系？C( 2 分)
+A:CPU
+B:数据库管理系统
+C:数据库
+D:主菜单
+
+2:分布透明性的最高层次是什么？A( 2 分)
+A:分片透明性
+B:位置透明性
+C:局部数据模型透明性
+D:分层透明性
+
+3:有两个不同的实体集，它们之间存在着1：1联系和一个M：N联系，那么根据ER模型转换成关系模型的规则，这个ER结构转换成的关系模式个数为？C( 2 分)
+A:1个
+B:2个
+C:3个
+D:4个
+
+4:SQL中，谓词EXISTS可用来测试一个集合是否？C( 2 分)
+A:有重复元组
+B:有重复的列名
+C:为非空集合
+D:值不惟一
+
+5:什么属于信息世界的模型，实际上是现实世界到机器世界的一个中间层次？B( 2 分)
+A:数据模型
+B:概念模型
+C:E-R图
+D:关系模型
+
+6:与集中式数据库相比，分布式数据库具有？B( 2 分)
+A:数据分散性
+B:数据分布性
+C:逻辑整体性
+D:数据透明性
+
+7:在关系数据库设计中,设计关系模式是？C( 2 分)
+A:需求分析阶段
+B:概念设计阶段
+C:逻辑设计阶段
+D:物理设计阶段
+
+8:在数据库设计的需求分析阶段，一般采用什么表示业务流程分析的结果？B( 2 分)
+A:E-R图
+B:数据流图
+C:基本表或视图
+D:数据库
+
+9:断言是DBS的？A( 2 分)
+A:完整性措施
+B:安全性措施
+C:恢复措施
+D:并发控制措施
+
+10:某高校五个系的学生信息存放在同一个基本表中，采取什么措施可使各系的管理员只能读取本系学生的信息？B( 2 分)
+A:建立各系的列级视图，并将对该视图的读取赋予该系的管理员
+B:建立各系的行级视图，并将对该视图的读权限赋予该系的管理员
+C:将学生信息表的部分列的读权限赋予各系的管理员
+D:将修改学生信息表的权限赋予各系的管理员
+
+11:一个关系若属于4NF ，，则属于？D( 2 分)
+A:1NF
+B:2NF
+C:3NF
+D:BCNF
+
+12:在SELECT语句的下列子句中，能与HAVING子句同时使用的是哪个？C( 2 分)
+A:ORDER BY子句
+B:FROM子句
+C:GROUP BY子句
+D:GRADE子句
+
+13:一级封锁协议解决了事务的并发操作带来的什么不一致性的问题？A( 2 分)
+A:数据丢失修改
+B:数据不可重复读
+C:读脏数据
+D:数据重复修改
+
+14:SQL语言的数据操纵语句包括SELECT,INSERT,UPDATE,和DELETE 等.其中最重要的也是使用最频繁的语句是哪个？A( 2 分)
+A:SELECT
+B:INSERT
+C:UPDATE
+D:DELETE
+
+15:授予用户Jean可以查询帐户表的权限，使用的SQL语句是什么？A( 3 分)
+A:GRANT SELECT ON 帐户 TO Jean
+B:GRANT SELECT TO Jean ON 帐户
+C:GRANT SELECT TO帐户 ON Jean
+D:GRANT SELECT ON Jean TO 帐户
+
+16:R（A，B ，C，D ），F是 R上成立的 FD集， F={A—〉B，B—〉C，C—〉D，D—〉A}，ρ={AB，BC，AD}是R上的一个分解，那么分解ρ相对于F 是？A( 3 分)
+A:是无损联接分解，也是保持FD的分解
+B:不是无损联接分解，但保持FD的分解
+C:是无损联接分解，但不保持FD的分解
+D:既不是无损联接分解，也不保持FD的分解
+
+17:关系模式中R（B，C，M，T，A，G），根据语义有如下函数依赖集：
+　　 F={ B-àC, (M,T)--àB,(M,C)-àT,(M,A)-àT,(A,B)--àG }
+　　 关系模式R的码是什么？D( 3 分)
+A:（M，T）
+B:（M，C）
+C:（M，A）
+D:.（A，B）
+
+18:使用OPEN语句打开游标，指针指向？D( 3 分)
+A:基本表的第一行
+B:基本表的第一行之后
+C:查询结果的第一行之后
+D:查询结果的第一行之前
+
+19:数据字典是软件需求分析阶段最重要的工具之一,其最基本的作用是什么？C( 3 分)
+A:数据库设计
+B:数据维护
+C:数据定义
+D:数据通讯
+
+20:设有关系模式R（U，F），U是R的属性集合， X，Y是U的子集，则多值函数依赖的传递律是什么？B( 3 分)
+A:如果X-〉Y，且Y-〉Z，则X-〉Z
+B:如果X-〉Y，Y-〉Z，则X-〉（Z-〉Y）
+C:如果X-〉Y，则X-〉（Z-〉Y）
+D:如果X-〉Y，则WX-〉WY
+
+多选题
+
+21:分布式数据库系统中的查询子系统由哪两部分组成？BD( 2 分)
+A:用户界面
+B:查询分析
+C:事务处理
+D:优化处理
+
+22:下述说法正确的是哪个？BCD( 2 分)
+A:数据的完整性是指保护数据以防止不合法的使用
+B:并发控制的主要方法是采用封锁机制
+C:等待时间过长是串行调度中可能出现的问题
+D:丢失更新是数据库并发调度中可能出现的问题
+
+23:以下说法错误的是哪个？ABD( 2 分)
+A:层次与网状模型是用结点来实现两个文件之间的联系
+B:层次与网状模型是用表来实现两个文件之间的联系
+C:层次与网状模型是用指针来实现两个文件之间的联系
+D:层次与网状模型是用位置寻址来实现两个文件之间的联系
+
+24:关系模型的完整性规则包括什么？ABC( 2 分)
+A:实体完整性规则
+B:参照完整性规则
+C:用户定义的完整性规则
+D:数据操作性规则
+
+25:下列是数据库恢复采用的方法是什么？ABC( 2 分)
+A:建立检查点
+B:建立副本
+C:建立日志文件
+D:建立索引
+
+26:对“数据独立性”和“数据联系”这两个概念之间的联系，理解错误的是哪个？BCD( 2 分)
+A:没有必然的联系
+B:同时成立或不成立
+C:前者蕴涵后者
+D:后者蕴涵前者
+
+27:下列为过程语言的为？ABD( 2 分)
+A:汇编语言
+B:PASCAL语言
+C:关系查询语言
+D:C语言
+
+28:一个数据库系统必须能够表示实体和关系。实体与实体之间的关系有一对一。一对多和多对多三种，其中什么可以描述多对多的联系？ACD( 2 分)
+A:网状模型
+B:层次模型
+C:关系模型
+D:网状模型和层次模型
+
+29:属于分布式数据库系统优点的是什么？ABC( 3 分)
+A:体系结构灵活，适应分布式的管理和控制机构
+B:系统的可靠性高；可用性好；具有可扩展性
+C:局部应用的响应速度快
+D:数据的安全性，保密性强
+
+30:以下说法中，错误的是什么？ACD( 3 分)
+A:进行自然联接运算的两个关系必须具有相同的属性个数
+B:进行自然联接运算的两个关系必须具有公共属性
+C:进行自然联接运算的两个关系必须具有相同关系名
+D:进行自然联接运算的两个关系必须具有相同关键字
+
+31:在OODB中,一般包括什么？ABC( 3 分)
+A:ODL 对象定义语言
+B:OML 对象操纵语言
+C:OQL对象查询语言
+D:OCL对象控制语言
+
+32:有关嵌入式SQL的叙述，正确的是哪个？ACD( 3 分)
+A:宿主语言是指C一类高级语言
+B:宿主语言是指SQL语言
+C:在程序中要区分SQL语句的宿主语言语句
+D:SQL有交互式和嵌入式两种使用方式
+
+判断题
+
+33:访问控制是防止对数据库进行非法访问的主要方法。A( 2 分)
+A:正确
+B:错误
+
+34:系统故障是由程序执行错误而引起事务非预计的，异常的终止。B( 2 分)
+A:正确
+B:错误
+
+35:分布式数据库系统的“数据分配”是指在计算机网络各场地上的对网络资源的分配策略。B( 2 分)
+A:正确
+B:错误
+
+36:物理数据独立性是指概念模式改变，外模式和应用程序不变。A( 2 分)
+A:正确
+B:错误
+
+37:一个关系数据库文件中的各条记录是前后顺序不能任意颠倒，一定要按照输入的顺序排列。B( 2 分)
+A:正确
+B:错误
+
+38:相对于其它数据管理技术，数据库系统有数据共享的特点A( 2 分)
+A:正确
+B:错误
+
+39:介质故障使数据库本身被破坏，并影响到出故障前的全部事务。A( 2 分)
+A:正确
+B:错误
+
+40:在数据库系统中，保证数据及语义正确和有效的功能是完整性控制。A( 2 分)
+A:正确
+B:错误
+
+41:有两个关系R和S，分别包含15个和10个元组，则在R∪S，R-S，R∩S中不可能出现的元组数目情况是15，5，10。B( 2 分)
+A:正确
+B:错误
+
+42:在DBS中，DBMS和OS之间的关系是相互调用。A( 2 分)
+A:正确
+B:错误
+
+43:统一管理的相关数据的集合是数据库系统。B( 3 分)
+A:正确
+B:错误
+
+44:关系数据库规范化是为解决关系数据库中保证数据的安全性和完整性问题而引入的。B( 3 分)
+A:正确
+B:错误
+
+45:在SQL语言中,修改结构时,应使用的命令是MODIFY。B( 3 分)
+A:正确
+B:错误
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SQL  server 数据开发（2）
+SQL Server 数据库开发 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:关系模式R 中若没有非主属性，则？B( 2 分)
+A:R 属于2NF 但不一定属于3NF
+B:R 属于3NF 但不一定属于BCNF
+C:R 属于BCNF 但不一定属于4NF
+D:R 属于4NF
+
+2:系统故障会造成什么？A( 2 分)
+A:内存数据丢失
+B:硬盘数据丢失
+C:软盘数据丢失
+D:磁带数据丢失
+
+3:某数据库中一个名为complaints的表，表中存储客户的投诉信息。公司客户服务部工作人员，通过使用客户端应用程序，新增或者编辑该表中的数据。客户服务部经理提出要求，每个投诉处理结束后，即该投诉信息被标记为“close”状态，都要及时通知他。作为数据库管理员，在不修改客户端应用程序的前提下，应该如果满足客户服务部经理的要求。A( 2 分)
+A:建立一个给客户服务部经理发送e-mail的UPDATE触发器。
+B:建立一个给客户服务部经理发送e-mail的存储过程。
+C:建立一个给客户服务部经理发送e-mail的用户自定义函数。
+D:建立一个对“ComplaintClosed”列的约束。
+
+4:断言是DBS的？A( 2 分)
+A:完整性措施
+B:安全性措施
+C:恢复措施
+D:并发控制措施
+
+5:若要求分解保持函数依赖，那么模式分解一定能够达到？B( 2 分)
+A:2NF
+B:3NF
+C:BCNF
+D:1NF
+
+6:下述安全性遭到破坏的情况是哪个？C( 2 分)
+A:用户读取“脏”数据
+B:由于系统断电而破坏了数据库中的数据
+C:用户非法读取数据库中的数据
+D:丢失更新问题
+
+7:若在实体R的诸属性中，属性A不是R的主键，却是另一个实体S的主键，则称A为R的？B( 2 分)
+A:候选键
+B:外部键
+C:非主属性
+D:主属性
+
+8:SQL中，“SALARY NOT IN (1000, 3000)”的语义是什么？C( 2 分)
+A:SALARY 〉= 3000 OR SALARY 〈= 1000
+B:SALARY 〉 3000 AND SALARY 〈 1000
+C:SALARY 〈〉 3000 AND SALARY 〈〉 1000
+D:SALARY 〈〉 3000 OR SALARY 〈〉 1000
+
+9:SELECT　语句中“FROM　R　”的R　是基本表名，但应理解为什么？D( 2 分)
+A:R的结构定义
+B:R的元组序号
+C:R　的全部元组
+D:R的元组变量
+
+10:一级封锁协议解决了事务的并发操作带来的什么不一致性的问题？A( 2 分)
+A:数据丢失修改
+B:数据不可重复读
+C:读脏数据
+D:数据重复修改
+
+11:在SQL语言中,创建SQL模式应使用什么语句？A( 2 分)
+A:CREATE SCHEMA
+B:CREATE TABLE
+C:CREATE VIEW
+D:CREATE DATABASE
+
+12:概念数据模型依赖于哪个数据库管理系统？D( 2 分)
+A:DB2
+B:Oracle
+C:MS SQL Server
+D:不依赖于任何数据库管理系统
+
+13:R的规范化程度最高达到？B( 2 分)
+A:1NF
+B:2NF
+C:3NF
+D:4NF
+
+14:正确的论述是哪个？A( 2 分)
+A:自然连接和等值连接很相像，但实际上他们是不同的。自然连接要去掉重复的属性，等值连接不需要去掉重复的属性。
+B:一个关系是参照关系，那么就不会是被参照关系。
+C:概念数据库与外部数据库都是物理存在的。
+D:一个关系可以有一个或多个主关键字。
+
+15:日志文件用于保存？D( 3 分)
+A:程序运行过程
+B:数据操作
+C:程序执行结果
+D:对数据库的更新操作
+
+16:数据库管理系统（DBMS）是什么？C( 3 分)
+A:一个完整的数据库应用系统
+B:一组硬件
+C:一组软件
+D:既有硬件，也有软件
+
+17:子模式DDL用来描述？B( 3 分)
+A:数据库的总体逻辑结构
+B:数据库的局部逻辑结构
+C:数据库的物理存储结构
+D:数据库的概念结构
+
+18:设学生关系模式为：学生(学号，姓名，年龄，性别，成绩，专业),则该关系模式的主键是什么？B( 3 分)
+A:性别
+B:学号
+C:学号，姓名
+D:学号，姓名，性别
+
+19:设有关系模式R（A，B ，C ，D），F是 R上成立的 FD集， F={B—〉A，D—〉C}，则F+中左部为 （BC）的函数依赖有几个？B( 3 分)
+A:4 个
+B:8 个
+C:16个
+D:32个
+
+20:对于学生—选课—课程的三个关系
+　　　　 S(S#,SNAME,SEX,AGE) SC(S#,C#,GRADE) C(C#,CNAME,TEACHER) 为了考虑安全性，每个教师只能存取自己讲授的课程的学生成绩，应创建？A( 3 分)
+A:视图
+B:索引
+C:游标
+D:表
+
+多选题
+
+21:在基本SQL语言中,可以实现什么？ABC( 2 分)
+A:定义视图
+B:定义基表
+C:查询视图和基表
+D:并发控制
+
+22:下列属于分布式数据库系统的缺点的是哪个？ABC( 2 分)
+A:系统开销较大，主要花在通信部分
+B:复杂的存取结构
+C:数据的安全性和保密性难处理
+D:难于集成现有系统
+
+23:关系模型不是用什么表示记录类型之间的联系？BCD( 2 分)
+A:表
+B:指针
+C:连线
+D:结点
+
+24:不属于BCNF的关系模式？ABC( 2 分)
+A:已消除了插入、删除异常
+B:已消除了插入、删除异常、数据冗余
+C:仍然存在插入、删除异常
+D:在函数依赖范畴内,已消除了插入和删除的异常
+
+25:对书店与图书之间的联系，描述正确的是哪个？AD( 2 分)
+A:一本书可以对应多个书店
+B:一本书只能对应一个书店
+C:一个书店必须对应多本书
+D:一个书店可以对应多本书
+
+26:以下说法中，错误的是什么？ACD( 2 分)
+A:在概念设计和逻辑设计之间起桥梁作用的是DFD
+B:在概念设计和逻辑设计之间起桥梁作用的是ER图
+C:在概念设计和逻辑设计之间起桥梁作用的是程序流程图
+D:在概念设计和逻辑设计之间起桥梁作用的是业务流程图
+
+27:对DDL语言的功能描述错误的是哪个？ACD( 2 分)
+A:实现对数据库的检索，插入，修改和删除
+B:描述数据库的结构，为用户建立数据库提供手段
+C:用于数据的安全控制，完整性控制，并发控制和通信控制
+D:提供数据初始装入、数据转储、数据库恢复、并发控制、通信控制
+
+28:使用 JDBC不可以做到的是哪个？ABC( 2 分)
+A:把二进制代码传送到任何关系数据库中
+B:把 Java 源代码传送到任何关系数据库中
+C:把表单信息传送到任何关系数据库中
+D:很容易地把 SQL 语句传送到任何关系数据库中
+
+29:下列关于“分布式数据库系统”的叙述中，不正确的是什么？ABD( 3 分)
+A:分散在各结点的数据是不相关的
+B:用户可以对远程数据进行访问，但必须指明数据的存储结点
+C:每一个结点是一个独立的数据库系统，既能完成局部应用，也支持全局应用
+D:数据可以分散在不同结点的计算机上，但必需在同一台计算机上进行数据处理
+
+30:不是层次模型必须满足的条件是哪个？ACD( 3 分)
+A:每个结点均可以有　一个以上的父结点
+B:有且仅有一个结点，无父结点
+C:不能有结点，无父结点
+D:可以有一个以上的结点，无父结点
+
+31:在多个用户共享数据库时,对同一资料的并发操作不会破坏数据库的什么？ABD( 3 分)
+A:安全性
+B:保密性
+C:完整性
+D:独立性
+
+32:下列哪种方法是并行数据库物理存储中常用的关系划分方法？ACD( 3 分)
+A:轮转法
+B:投影法
+C:散列分布
+D:范围分布
+
+判断题
+
+33:聚合函数COUNT(*)不忽略空值（NULL）。A( 2 分)
+A:正确
+B:错误
+
+34:在数据库系统中，保证数据及语义正确和有效的功能是完整性控制。A( 2 分)
+A:正确
+B:错误
+
+35:统一管理的相关数据的集合是数据库系统。B( 2 分)
+A:正确
+B:错误
+
+36:处理并发控制的主要方法是采用密码技术。B( 2 分)
+A:正确
+B:错误
+
+37:分布式数据库系统的“数据分片”是指混合型分片。A( 2 分)
+A:正确
+B:错误
+
+38:物理数据独立性是指概念模式改变，外模式和应用程序不变。A( 2 分)
+A:正确
+B:错误
+
+39:语句alter table table_name add column idd int不能正确执行。A( 2 分)
+A:正确
+B:错误
+
+40:现实世界中事物的特性在信息世界中称为属性。A( 2 分)
+A:正确
+B:错误
+
+41:数据库类型是按照数据存取方法来划分的。B( 2 分)
+A:正确
+B:错误
+
+42:以下那中情况不是连接陷阱产生原因把多对多的联系转换为一对一的联系。A( 2 分)
+A:正确
+B:错误
+
+43:组成数据库系统的是数据库及其必备的硬件系统。B( 3 分)
+A:正确
+B:错误
+
+44:如果两个实体之间的联系是M：N,则需要引入第三个交叉关系。A( 3 分)
+A:正确
+B:错误
+
+45:一个记录类型可以作为多个络类型的从记录类型。B( 3 分)
+A:正确
+B:错误
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SQL server数据开发（3）
+SQL Server 数据库开发 试题 班级____________ 姓名__________ 成绩__________
+
+
+单选题
+
+1:关系规范化中的插入操作异常是指什么？D( 2 分)
+A:不该删除的数据被删除
+B:不该插入的数据被插入
+C:应该删除的数据未被删除
+D:应该插入的数据未被插入
+
+2:在基本SQL语言中，不可以实现？D( 2 分)
+A:定义视图
+B:定义基表
+C:查询视图和基表
+D:并发控制
+
+3:以下说法错误的是哪个？D( 2 分)
+A:在数据库技术中，“脏”数据是指未回退的数据
+B:在数据库技术中，“脏”数据是指未提交的数据
+C:在数据库技术中，“脏”数据是指回退的数据
+D:在数据库技术中，“脏”数据是指未提交随后又被撤消的数据
+
+4:数据库提供给用户的接口是什么，它具有数据定义，数据操作，和数据检查功能？A( 2 分)
+A:数据库语言
+B:过程化语言
+C:数据的操作性
+D:数据的兼容性
+
+5:在关系数据模型中，通常可以把什么称为属性？D( 2 分)
+A:记录
+B:基本表
+C:模式
+D:字段
+
+6:一个数据库系统必须能够表示实体和关系。关系可与几个实体有关？D( 2 分)
+A:0个
+B:1 个
+C:3 个或3个以上
+D:1个或1个以上
+
+7:SELECT语句中“FROM R”的R是基本表名，但应理解为？D( 2 分)
+A:R的结构定义
+B:R的元组序号
+C:R中全部元组
+D:R的元组变量
+
+8:数据库的安全控制是什么？B( 2 分)
+A:保证数据的完整性和有效性
+B:安全性控制涉及到法律和道德方面的问题
+C:安全性控制对于计算机系统至关重要,但对于多用户使用的数据库必要性不大
+D:只要通过口令测试就可以无限地访问数据库
+
+9:用什么形式表示实体类型和实体间的联系是关系模型的主要特征？D( 2 分)
+A:指针
+B:链表
+C:关键字
+D:表格
+
+10:一个关系若属于4NF ，，则属于？D( 2 分)
+A:1NF
+B:2NF
+C:3NF
+D:BCNF
+
+11:数据的逻辑独立性是指？C( 2 分)
+A:存储结构与物理结构的逻辑独立性
+B:数据与存储结构的逻辑独立性
+C:数据与程序的逻辑独立性
+D:数据元素之间的逻辑独立性
+
+12:数据库管理系统（DBMS）它的主要功能是什么？B( 2 分)
+A:修改数据库
+B:定义数据库
+C:应用数据库
+D:保护数据库
+
+13:DB中数据导航是指什么？C( 2 分)
+A:数据之间的联系
+B:数据之间指针的联系
+C:从已知数据找未知数据的过程
+D:数据的组合方式
+
+14:对DB中数据的操作分成哪两大类？A( 2 分)
+A:查询和更新
+B:检索和修改
+C:查询和修改
+D:插入和修改
+
+15:实体完整性和参照完整性属于什么？C( 3 分)
+A:静态列级约束
+B:静态元组约束
+C:静态关系约束
+D:动态约束
+
+16:关系模式R分解成数据库模式ρ的一个优点是什么？D( 3 分)
+A:数据分散存储在多个关系中
+B:数据容易恢复
+C:提高了查询速度
+D:存储悬挂元组
+
+17:数据库设计人员和用户之间沟通信息的桥梁是什么？B( 3 分)
+A:程序流程图
+B:实体联系图
+C:模块结构图
+D:数据结构图
+
+18:数据库逻辑结构设计的主要任务是什么？B( 3 分)
+A:建立E-R图和说明书
+B:创建数据库说明
+C:建立数据流图
+D:把数据送入数据库
+
+19:数据库系统运行的基本工作单位是事务,事务通常以BEGIN TRANSACTION语句开始,以COMMIT 或ROLLBACK语句结束.COMMIT表示什么？D( 3 分)
+A:物理数据库尚未更新,事务执行失败
+B:物理数据库尚未更新,事务执行成功
+C:物理数据库已更新,事务执行失败
+D:物理数据库已更新,事务执行成功
+
+20:设有关系模式R（U，F），U是R的属性集合， X，Y是U的子集，则多值函数依赖的传递律是什么？B( 3 分)
+A:如果X-〉Y，且Y-〉Z，则X-〉Z
+B:如果X-〉Y，Y-〉Z，则X-〉（Z-〉Y）
+C:如果X-〉Y，则X-〉（Z-〉Y）
+D:如果X-〉Y，则WX-〉WY
+
+多选题
+
+21:数据库恢复的基础是利用转储的冗余数据, 这些转储的冗余数据包括什么？BC( 2 分)
+A:审计档案
+B:日志文件
+C:数据库后援副本
+D:数据字典
+
+22:以下叙述中错误的是哪个？BCD( 2 分)
+A:函数依赖X—〉Y的有效性仅决定于两属性的值；而多值X—〉—〉Y的有效性与属性集的范围有关
+B:函数依赖X—〉Y与X—〉—〉Y的有效性都决定于两属性集的值
+C:多值依赖X—〉Y若在R（U）上成立，则对任何Y‘都有X—〉—〉Y成立
+D:对于函数依赖X—〉Y在R 上成立，不能断言对任何Y‘都有有X—〉Y‘成立
+
+23:在SQL中，用户能直接进行查询操作的是什么？AC( 2 分)
+A:实表
+B:索引
+C:虚表
+D:用户文件
+
+24:以下说法，错误的是什么？ACD( 2 分)
+A:用有向图结构表示实体间联系的数据模型称为层次模型
+B:用有向图结构表示实体间联系的数据模型称为网状模型
+C:用有向图结构表示实体间联系的数据模型称为关系模型
+D:用有向图结构表示实体间联系的数据模型称为实体联系模型
+
+25:以下说法错误的是哪个？ABD( 2 分)
+A:层次与网状模型是用结点来实现两个文件之间的联系
+B:层次与网状模型是用表来实现两个文件之间的联系
+C:层次与网状模型是用指针来实现两个文件之间的联系
+D:层次与网状模型是用位置寻址来实现两个文件之间的联系
+
+26:在关系模型中，下列说法不正确的是哪个？ABC( 2 分)
+A:关系中存在可分解的属性值
+B:关系中允许出现相同的元组
+C:关系中考虑元组的顺序
+D:元组中，属性理论上是无序的，但使用时按习惯考虑列的顺序
+
+27:关系模型不是用什么表示记录类型之间的联系？BCD( 2 分)
+A:表
+B:指针
+C:连线
+D:结点
+
+28:下列实体类型的联系中不属于一对一联系的是？ABD( 2 分)
+A:班级对学生的所属联系
+B:父亲对孩子的亲生联系
+C:省对省会的所属联系
+D:商店和顾客之间的联系
+
+29:在数据库设计中，对什么改变不属于重新构造？ABD( 3 分)
+A:需求分析
+B:数据流
+C:概念模式
+D:数据字典
+
+30:SQL中，与“NOT　IN　”不等价的操作符是什么？ABC( 3 分)
+A:=SOME
+B:〈〉SOME
+C:=ALL
+D:〈〉ALL
+
+31:下列定义的四个视图中，不能可以进行更新操作的是哪个？ABD( 3 分)
+A:CREATE VIEW S_G(S#,SNAME,CNAME,GRADE) AS SELECT S.S#,SNAME,CNAME,GRADE FROM S,SC,C WHERE S.S#=SC.S# AND SC.C#=C.C#
+B:CREATE VIEW S_AVG_G(S#, AVG_GRADE) AS SELECT S#, AVG(GRADE) FROM SC WHERE GRADE IS NOT NULL GROUP BY S#
+C:CREATE VIEW S_MALE(S#, SNAME) AS SELECT S#, SNAME FROM S WHERE AGE 〉= 20
+D:CREATE VIEW S_FEMALE(SNAME, AGE) AS SELECT SNAME, AGE FROM S WHERE SEX='女'
+
+32:以下论述，错误的是哪个？ACD( 3 分)
+A:在关系模型中，通常可以把记录称为关系模式
+B:在关系模型中，通常可以把记录类型称为关系模式
+C:在关系模型中，通常可以把元组称为关系模式
+D:在关系模型中，通常可以把元组集称为关系模式
+
+判断题
+
+33:数据库系统和文件系统的主要区别是文件系统不能解决数据冗余和数据独立性问题，而数据库系统能够解决。A( 2 分)
+A:正确
+B:错误
+
+34:关系演算的基础是数理逻辑中的谓词演算。A( 2 分)
+A:正确
+B:错误
+
+35:系统故障是由程序执行错误而引起事务非预计的，异常的终止。B( 2 分)
+A:正确
+B:错误
+
+36:ER方法的三要素是实体、属性、联系。A( 2 分)
+A:正确
+B:错误
+
+37:组成数据库系统的是数据库及其必备的硬件系统。B( 2 分)
+A:正确
+B:错误
+
+38:在DBS中，DBMS和OS之间的关系是相互调用。A( 2 分)
+A:正确
+B:错误
+
+39:有两个关系R和S，分别包含15个和10个元组，则在R∪S，R-S，R∩S中不可能出现的元组数目情况是15，5，10。B( 2 分)
+A:正确
+B:错误
+
+40:一个关系数据库文件中的各条记录是前后顺序不能任意颠倒，一定要按照输入的顺序排列。B( 2 分)
+A:正确
+B:错误
+
+41:相对于其它数据管理技术，数据库系统有数据共享的特点。A( 2 分)
+A:正确
+B:错误
+
+42:以下那中情况不是连接陷阱产生原因把多对多的联系转换为一对一的联系。A( 2 分)
+A:正确
+B:错误
+
+43:关系模型中，一个关键字是可由一个或多个其值能唯一标识该关系中唯一元组的属性组成。A( 3 分)
+A:正确
+B:错误
+
+44:事务是DBMS的基本单位,它是用户定义的一组逻辑一致的程序序列。A( 3 分)
+A:正确
+B:错误
+
+45:基本SQL语言可以创建的内容中,不包括索引。B( 3 分)
+A:正确
+B:错误
